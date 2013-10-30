@@ -1,0 +1,15 @@
+{# Creo l'array che contiene i link per il menu orizzontale. #}
+{%
+	set links = {
+		'Home Page': urlFor('Home Page'),
+		'Page 1': urlFor('Page 1'),
+		'Page 2': urlFor('Page 2'),
+		'Page 3': urlFor('Page 3')
+	}
+%}
+
+<ul id="navigation">
+	{% for key, link in links %}
+	    <li><a href="{{ link }}" >{{key}} -> {{ link }}</a></li>
+	{% endfor %}
+</ul>
